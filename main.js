@@ -1,10 +1,9 @@
-
-// Declaration of price and sizing
+// Declare elements
+const sizeSelector = document.getElementById("product-size");
 const priceElement = document.getElementById("product-price");
-const sizeSelector = document.getElementById("size-selector");
 
-
+// Add event listener to the dropdown
 sizeSelector.addEventListener("change", (event) => {
-const selectedPrice = event.target.value;
-priceElement.textContent = `$${selectedPrice}`;
+    const selectedPrice = event.target.value; // Get the price directly from the selected option
+    priceElement.textContent = `$${selectedPrice}`; // Update the price display
 });
